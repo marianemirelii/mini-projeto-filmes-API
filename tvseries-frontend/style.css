@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --color-primary: #4d41c0;
+    --text-gray: #4A4A4A; 
+    --text-light-gray: #aaa;
+    --bg-gray: #e8e8e8;
+    --white: #fff;
+    --star-yellow: #FFBB3A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--white);
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+nav h1 {
+    font-size: 24px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--text-light-gray);
+    margin-right: 10px;
+}
+
+.search button {
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+}
+
+.pagination label {
+    margin-right: 10px;
+}
+
+#seriesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    margin: 15px;
+    border: 1px solid var(--text-light-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--white);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-description {
+    padding: 15px;
+}
+
+.card-description h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-description .series-genres {
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+.card-description .series-summary {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--text-gray);
+}
+
+.search button, .pagination button, .btn {
+    padding: 10px 15px;
+    background-color: var(--color-primary);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s; /* Adicionando transições */
+}
+
+.search button:hover, 
+.pagination button:hover, 
+.btn:hover {
+    background-color: #3f35b2; /* Um tom mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* Levantar o botão levemente */
+}
+
+.search button:focus, 
+.pagination button:focus {
+    outline: none; /* Remove o contorno padrão ao focar no botão */
+    box-shadow: 0 0 5px rgba(77, 65, 192, 0.5); /* Sombra ao focar */
+}
+
+.pagination select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pagination select:focus {
+    outline: none;
+    border-color: var(--color-primary); /* Muda a borda quando está em foco */
+}
